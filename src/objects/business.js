@@ -38,9 +38,10 @@ export default class Business extends AbstractCrudObject {
       two_factor_type: 'two_factor_type',
       updated_by: 'updated_by',
       updated_time: 'updated_time',
-      vertical: 'vertical'
+      vertical: 'vertical',
     });
   }
+
 
   createAdStudy (fields, params): AdStudy {
     return this.createEdge(

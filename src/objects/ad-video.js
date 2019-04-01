@@ -85,6 +85,7 @@ export default class AdVideo extends AbstractCrudObject {
    *  Returns all the thumbnails associated with the ad video
    */
   getThumbnails (fields: Object, params: Object): Cursor {
-    return this.getEdge(VideoThumbnail, fields, params, 'thumbnails');
+    var fetchFirstPage = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    return this.getEdge(VideoThumbnail, fields, params, fetchFirstPage, 'thumbnails');
   }
 }
